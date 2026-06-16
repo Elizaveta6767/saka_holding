@@ -16,7 +16,7 @@
 .menu{
     display: flex;
     justify-content: space-between;
-    padding: 20px 200px;
+    padding: 20px 300px;
     color: var(--text-color);
     .link_gap{
         display: flex;
