@@ -8,15 +8,11 @@
             <p class="order-subtitle">
                 Просто оставьте заявку на сайте и мы свяжемся с вами в ближайшее время
             </p>
-
-            <!-- Форма -->
             <form @submit.prevent="handleSubmit" class="order-form">
                 <div class="input-wrapper">
                     <input type="text" v-model="formData.name" placeholder="Ваше имя" required class="form-input" />
                 </div>
-
                 <div class="input-wrapper">
-                    <!-- Простая маска для ввода телефона -->
                     <input type="tel" v-model="formData.phone" @input="handlePhoneInput"
                         placeholder="+7 (___) ___-__-__" required class="form-input" />
                 </div>
@@ -24,8 +20,6 @@
                 <div class="input-wrapper">
                     <input type="email" v-model="formData.email" placeholder="Ваш E-mail" required class="form-input" />
                 </div>
-
-                <!-- Кнопка отправки -->
                 <button type="submit" class="submit-btn">
                     <span>Отправить</span>
                     <svg class="arrow-icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -51,8 +45,7 @@ const formData = ref({
 })
 </script>
 
-<style scoped>
-/* Фоновый контейнер блока */
+<style lang="scss" scoped>
 .order-section {
     width: 100%;
     padding: 40px 20px;
@@ -64,14 +57,12 @@ const formData = ref({
     max-width: 1200px;
     margin: 0 auto;
     background-color: #1c252c;
-    /* Темный графитовый цвет */
     border-radius: 20px;
     padding: 50px 60px;
     box-sizing: border-box;
     text-align: center;
 }
 
-/* Заголовок */
 .order-title {
     display: flex;
     justify-content: center;
@@ -83,9 +74,14 @@ const formData = ref({
     margin: 0 230px 15px 230px;
     letter-spacing: -0.3px;
     max-width: 600px;
+    @include tablet{
+        margin: 0 80px 15px 80px;
+    }
+    @include mobile{
+        margin: 0 20px 6px 20px;
+    }
 
 }
-
 .order-subtitle {
     font-family: var(--font-famaly);
     color: #a5b1bc;
@@ -146,6 +142,12 @@ const formData = ref({
     justify-content: space-between;
     padding: 0 25px;
     box-sizing: border-box;
+    @include tablet{
+            min-height: 52px;
+    }
+    @include mobile{
+            min-height: 52px;
+    }
 }
 
 .submit-btn:hover {

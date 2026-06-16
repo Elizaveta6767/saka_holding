@@ -12,6 +12,7 @@
 
 .logo{
     cursor: pointer;
+    border: 0;
     > img {
         @include mobile{
             width: 86px;

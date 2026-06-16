@@ -1,6 +1,6 @@
 <template>
   <section class="fabrics-section">
-    <div class="container">
+    <div class="fabrics-container">
       <h2 class="section-title">
         Выбирайте из множества<br/>разновидностей тканей
       </h2>
@@ -71,7 +71,7 @@ const fabrics = ref([
   justify-content: center;
 }
 
-.container {
+.fabrics-container {
   max-width: 1200px;
   width: 100%;
 }
@@ -126,7 +126,7 @@ const fabrics = ref([
   font-weight: 600;
 }
 
-@media (max-width: 900px) {
+@include tablet {
   .span-5, .span-4, .span-3 {
     grid-column: span 6;
   }
@@ -135,7 +135,7 @@ const fabrics = ref([
   }
 }
 
-@media (max-width: 550px) {
+@include mobile {
   .span-5, .span-4, .span-3 {
     grid-column: span 12;
   }

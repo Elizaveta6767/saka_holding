@@ -64,5 +64,6 @@ const newsList = ref([
   gap: 30px;
   max-width: 1200px;
   width: 100%;
+
 }
 </style>

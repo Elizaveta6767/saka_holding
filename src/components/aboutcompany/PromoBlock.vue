@@ -76,6 +76,9 @@
   font-weight: 700;
   margin-bottom: 35px;
   max-width: 600px;
+  @include tablet{
+    font-size: 20px;
+  }
 }
 
 .highlight {
@@ -92,7 +95,7 @@
   display: flex;
   align-items: flex-start; 
   gap: 15px;
-  font-size: 28px;
+  font-size: 18px;
   margin-bottom: 25px;
   max-width: 500px;
 }
@@ -136,7 +139,7 @@
   transition: transform 0.3s ease;
 }
 
-@media (max-width: 992px) {
+@include tablet{
   .promo-container {
     flex-direction: column; 
   }
@@ -144,7 +147,6 @@
   .promo-image-wrapper {
     flex: 0 0 auto;
     width: 100%;
-    height: 350px; 
   }
 
   .promo-image {

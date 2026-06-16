@@ -8,6 +8,12 @@
 <style lang="scss">
     .titlee{
         padding: 40px 330px;
+        @include tablet{
+            padding: 25px 200px;
+        }
+        @include mobile{
+            padding: 12px 100px;
+        }
     }
 
 </style>

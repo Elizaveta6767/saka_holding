@@ -119,6 +119,13 @@ const stopAutoplay = () => {
   overflow: hidden;
   font-family: 'Inter', sans-serif;
   box-shadow: 0 15px 35px rgba(0, 0, 0, 0.3);
+  @include tablet{
+    font-size: 26px;
+  }
+  @include mobile{
+    font-size: 18px;
+    min-height: 620px;
+  }
 }
 .slider-track {
   display: flex;
@@ -151,6 +158,12 @@ const stopAutoplay = () => {
   line-height: 1.3;
   color: #ffffff;
   margin: 0 0 40px 0;
+  @include tablet{
+    font-size: 26px;
+  }
+  @include mobile{
+    font-size: 18px;
+  }
 }
 
 :deep(.accent) {
@@ -171,6 +184,9 @@ const stopAutoplay = () => {
   border: 1px solid #000000;
   min-width: 200px;
   box-sizing: border-box;
+  @include mobile{
+    max-width: 241px;
+  }
 }
 
 .slide-button .arrow {
@@ -245,6 +261,106 @@ const stopAutoplay = () => {
 .counter .total {
   color: #4b5563;
 }
+
+/* responsive: планшет и мобильные */
+
+@include mobile{
+  .slider-card {
+    max-width: 360px; /* под айфоны/малые экраны */
+    height: 780px;    /* высокая карточка, как на фото */
+    border-radius: 18px;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .slide-content {
+    gap: 18px;
+  }
+
+  .slide-title {
+    font-size: 18px;
+    line-height: 1.25;
+    font-weight: 700;
+    min-width: 180px;
+  }
+
+  .slide-button {
+    padding: 14px 20px;
+    font-size: 15px;
+    min-width: 160px;
+    width: auto;
+    border-radius: 26px;
+    border: 1px solid #000000;
+    margin-bottom: 400px;
+  }
+
+  /* изображение сдвигаем ближе к правому краю и делаем чуть больше,
+     чтобы визуально как на присланной картинке */
+  .slide-image-container {
+    position: absolute;
+    right: 8px;
+    bottom: 0;
+    height: 58%;    /* занимает нижнюю часть карточки */
+    width: 100%;
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    pointer-events: none;
+    z-index: 1;
+  }
+
+  .slide-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* чтобы кадрирование похоже на фото */
+    object-position: bottom right;
+  }
+
+  /* управляющие элементы ближе к левому нижнему краю */
+  .slider-controls {
+    position: absolute;
+    bottom: 20px;
+    left: 16px;
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    z-index: 3;
+    pointer-events: none;
+  }
+
+  .indicators {
+    display: flex;
+    gap: 8px;
+    pointer-events: auto;
+    margin-bottom: 400px;
+  }
+
+  .indicator-bar {
+    width: 26px;
+    height: 3px;
+  }
+
+  .indicator-bar.active { background-color: var(--gold-color); }
+
+  .counter {
+    font-size: 14px;
+    gap: 6px;
+    pointer-events: auto;
+    margin-bottom: 350px;
+    margin-right: 30px;
+  }
+
+  .counter .divider,
+  .counter .total {
+    color: #9ca3af; /* сероватый как в макете */
+  }
+
+  /* чуть уменьшаем общие отступы, чтобы всё помещалось */
+  .slide-content { padding-right: 24%; } /* освобождаем место для изображения */
+}
+
+/* общий фикс: на маленьких экранах убираем фиксированную min-width кнопки */
+  .slide-button { min-width: 0; padding: 12px 18px; }
 
 
   

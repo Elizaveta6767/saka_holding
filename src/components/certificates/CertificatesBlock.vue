@@ -140,6 +140,12 @@ onUnmounted(() => {
     text-align: center;
     margin-bottom: 50px;
     letter-spacing: -0.5px;
+    @include tablet{
+        font-size: 26px;
+    }
+    @include mobile{
+        font-size: 20px;
+    }
 }
 
 .certs-wrapper {

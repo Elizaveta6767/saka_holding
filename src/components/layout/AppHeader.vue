@@ -10,52 +10,57 @@ import Fabrics from '@/components/header/fabrics.vue';
 </script>
 
 <template>
-<div class="header">
-  <div class="container">
-    <Logo />
-    <Emblem />
-    <span class="text_header">Производитель турецкого<br>трикотажного полотна</span>
-    <Shop />
-    <User />
-    <Call/>
-    <Theme/>
-      <span></span><span></span><span></span>
+  <div class="header">
+    <div class="container">
+      <Logo />
+      <Emblem />
+      <span class="text_header">Производитель турецкого<br>трикотажного полотна</span>
+        <Shop />
+        <User />
+        <Call />
+        <Theme />
+    </div>
+    <div class="menu_header">
+      <Menu />
+    </div>
+    <div class="sale_header">
+      <Fabrics />
+    </div>
   </div>
-  <div class="menu_header">
-    <Menu/>
-  </div>
-  <div class="sale_header">
-    <Fabrics/>
-  </div>
-</div>
-  
+
 </template>
 
 <style lang="scss">
-.header{
+.header {
   font-family: var(--font-family);
   display: flex;
   flex-direction: column;
   color: var(--text-color);
- width: 100%;
- justify-content: center;
+  width: 100%;
+  justify-content: center;
 
-  .container{
+
+
+
+  .container {
     display: flex;
     justify-content: space-between;
     gap: 25px;
     background-color: var(--header-top-color);
     align-items: center;
     padding: 40px 300px;
-     .text_header{
-    font-weight: 100;
+
+    .text_header {
+      font-weight: 100;
+    }
   }
-  }
-  .menu_header{
+
+  .menu_header {
     background-color: var(--header-medium-color);
   }
-  .sale_header{
-    display: flex;    
+
+  .sale_header {
+    display: flex;
     height: 50px;
     max-width: 100%;
     background-color: var(--header-top-color);
@@ -63,5 +68,4 @@ import Fabrics from '@/components/header/fabrics.vue';
     justify-content: space-between;
   }
 }
-
 </style>
