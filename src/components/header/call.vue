@@ -20,14 +20,14 @@
     .call_top{
         display: flex;
         align-items: center;
-        gap: 10px;
-        font-size: 20px;
+        gap: 6px;
+        font-size: 18px;
     }
     .call_down{
         display: flex;
         justify-content: end;
         font-size: 12px;
-        margin-left: 100px;
+        margin-left: 70px;
         cursor: pointer;
         
     }

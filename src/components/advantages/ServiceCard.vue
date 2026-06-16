@@ -7,7 +7,7 @@
 </template>
 
 <script setup>
-import { title } from 'process';
+const title = 'ServiceCard';
 import UiIcon from '../../components/ui/UiIcon.vue'
 
 const  props = defineProps<{

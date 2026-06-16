@@ -8,6 +8,7 @@
     import PaletteBlock from '@/components/tshirt/PaletteBlock.vue';
     import PaletteTitle from '@/components/palettetitle/PaletteTitle.vue';
     import OrderForm from '@/components/orderform/OrderFormBlock.vue';
+    import Recently from '@/components/recently-viewed/Recently.vue';
 </script>
 
 <template>
@@ -26,6 +27,8 @@
     <PaletteTitle/>
     <PaletteBlock/>
     <OrderForm/>
+    <Recently/>
+
 </template>
 
 <style lang="scss">

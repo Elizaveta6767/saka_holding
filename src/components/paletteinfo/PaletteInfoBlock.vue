@@ -10,7 +10,7 @@
             <div class="warning-column">
                 <div class="warning-box">
                     <div class="icon-wrapper">
-                        <img src="/src/assets/icons/warning.svg" class="warning-icon" alt="">
+                        <img src="../../assets/icons/warning.svg" class="warning-icon" alt="">
                     </div>
                     <div class="warning-text">
                         <span class="warning-accent">ВНИМАНИЕ!</span>

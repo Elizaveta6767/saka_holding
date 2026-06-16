@@ -5,7 +5,7 @@
       <div class="overlay"></div>
       
       <RouterLink  class="arrow-btn">
-        <img src="/src/assets/icons/strela.svg" alt="" >
+        <img src="../../assets/icons/strela.svg" alt="" >
       </RouterLink>
       
       <h3 class="title">{{ title }}</h3>
