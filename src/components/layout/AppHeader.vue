@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import Logo from '@/components/header/Logo.vue';
+import Logo from '@/components/header/logo.vue';
 import Emblem from '@/components/header/emblem.vue';
 import Shop from '@/components/header/shop.vue';
 import User from '@/components/header/user.vue';
@@ -19,6 +19,7 @@ import Fabrics from '@/components/header/fabrics.vue';
     <User />
     <Call/>
     <Theme/>
+      <span></span><span></span><span></span>
   </div>
   <div class="menu_header">
     <Menu/>

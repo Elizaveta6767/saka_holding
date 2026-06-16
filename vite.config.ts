@@ -1,10 +1,11 @@
 import { defineConfig } from 'vite'
 import vue from '@vitejs/plugin-vue'
 import path from 'path'
+import svgLoader from 'vue-svg-loader';
 
 // https://vite.dev/config/
 export default defineConfig({
-  plugins: [vue()],
+  plugins: [vue(), svgLoader()],
   resolve: {
     alias: {
       '@': path.resolve(__dirname, './src')
@@ -13,7 +14,6 @@ export default defineConfig({
   css: {
     preprocessorOptions: {
       scss: {
-        api: 'modern-compiler',
         additionalData: `
           @use "@/assets/styles/mixins" as *;
           @use "@/assets/styles/variables" as *;
