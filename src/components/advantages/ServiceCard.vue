@@ -1,18 +1,20 @@
 <template>
   <div class="service-card">
-    <UiIcon name='logistic'/>
-    <h3>{{ title }}</h3>
-    <p>{{ description }}</p>
+    <UiIcon :name="props.icon" />
+    <h3>{{ props.title }}</h3>
+    <p>{{ props.description }}</p>
   </div>
 </template>
 
 <script setup>
+import { title } from 'process';
 import UiIcon from '../../components/ui/UiIcon.vue'
 
-defineProps({
-  title: String,
-  description: String
-})
+const  props = defineProps<{
+  icon: string,
+  title: string,
+  description: string
+}>({})
 </script>
 
 <style scoped>
