@@ -3,13 +3,18 @@
         <RouterLink class="link" to="/" >Главная</RouterLink> 
         <RouterLink class="link_gap" to="/catalog">Каталог<img src="../../assets/icons/arrow.svg" alt="arrow"></RouterLink>
         <RouterLink class="link" to="/about" >О компании</RouterLink>
-        <RouterLink class="link" to="/news" >Новости</RouterLink>
-        <RouterLink class="link" to="/del" >Доставка и оплата</RouterLink>
-        <RouterLink class="link" to="/contacts" >Контакты</RouterLink>
+        <RouterLink class="link" to="#" >Новости</RouterLink>
+        <RouterLink class="link" to="#" >Доставка и оплата</RouterLink>
+        <RouterLink class="link" to="#" >Контакты</RouterLink>
+    
+        <UiIcon name="call"/>
+
     </div>
 </template>
 
-<script>
+<script setup lang="ts">
+import {RouterLink} from 'vue-router';
+import UiIcon from '../ui/UiIcon.vue';
 </script>
 
 <style lang="scss">

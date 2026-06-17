@@ -9,6 +9,7 @@
     import PaletteTitle from '@/components/palettetitle/PaletteTitle.vue';
     import OrderForm from '@/components/orderform/OrderFormBlock.vue';
     import Recently from '@/components/recently-viewed/Recently.vue';
+    
 </script>
 
 <template>

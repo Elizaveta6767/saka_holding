@@ -54,7 +54,7 @@
     font-weight: bold;
 }
 .text_circle{
-    align-items: center;
+    text-align: center;
 }
 .row{
     display: flex;
@@ -62,6 +62,4 @@
     gap: 30px;
     padding: 100px 0 0 0;
 }
-
-
 </style>

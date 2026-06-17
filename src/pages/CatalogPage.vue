@@ -1,10 +1,12 @@
 <script setup lang="ts">
+import Reviews from '../components/about/reviews.vue';
 import ServiceSection from '../components/advantages/ServiceSection.vue';
 import Infocompani from '../components/container.vue/infocompani.vue';
 import Text from '../components/container.vue/text.vue';
 import View from '../components/container.vue/view.vue';
-
-</script>
+import CertificatesBlock from '@/components/certificates/CertificatesBlock.vue';
+import Recently from '@/components/recently-viewed/Recently.vue';
+    </script>
 
 <template>
   <div class="main">
@@ -18,6 +20,13 @@ import View from '../components/container.vue/view.vue';
   </div>
   <div class="task">
     <ServiceSection/>
+  </div>
+  <div>
+    <CertificatesBlock/>
+  </div>
+  <Reviews/>
+  <div>
+    <Recently/>
   </div>
 </template>
 <style lang="scss">

@@ -1,32 +1,41 @@
 <template>
-  <div class="service-card">
-    <UiIcon :name="props.icon" />
-    <h3>{{ props.title }}</h3>
-    <p>{{ props.description }}</p>
+  <div class="card-service">
+    <UiIcon :name="icon" />
+    <h2 class="title-service">{{ title }}</h2>
+    <p>{{ description }}</p>
   </div>
 </template>
 
-<script setup>
-const title = 'ServiceCard';
-import UiIcon from '../../components/ui/UiIcon.vue'
+<script setup lang="ts">
+import UiIcon from '../ui/UiIcon.vue';
 
-const  props = defineProps<{
-  icon: string,
-  title: string,
+defineProps<{
+  icon: string
+  title: string
   description: string
-}>({})
+}>()
 </script>
 
-<style scoped>
-.service-card {
-  background: white;
-  padding: 30px;
-  border-radius: 15px;
-  text-align: center;
-  box-shadow: 0 4px 15px rgba(0,0,0,0.05);
-  transition: transform 0.3s;
+<style lang="scss" scoped>
+.card-service {
+display: flex;
+flex-direction: column;
+align-items: center;
+max-width: 260px;
+max-height: 337px;
+background-color: var(--grey-color);
+border-radius: 16px;
+text-align: center;
+padding: 10px 6px;
+    >p{
+        line-height: 30px;
+        font-size: 16px;
+    }
+    .title-service{
+        font-size: 16px;
+    }
+
 }
-.icon { font-size: 40px; margin-bottom: 20px; }
-h3 { font-size: 16px; margin-bottom: 15px; text-transform: uppercase; }
-p { color: #666; font-size: 14px; line-height: 1.5; }
 </style>
+
+

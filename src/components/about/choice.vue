@@ -5,7 +5,7 @@
     <div class="choice">
         <div class="filtres">
         <span>ФИЛЬТРЫ</span>
-        <div class="circle">3</div>
+        <div class="circle_filter">3</div>
         </div>
         <span>СБРОСИТЬ<img src="../../assets/icons/x.svg" alt="x"></span>
         <span>СОРТИРОВКА:</span>
@@ -19,11 +19,13 @@
     display: flex;
     padding: 0 20px 0 0;
 }
-.circle{
+.circle_filter{
     background-color: var(--gold-color);
     border-radius: 100%;
     width: 20px;
     height: 20px;
+    display: flex;
+    justify-content: center;
 }
 .choice{
     color: #a9a9a9;
