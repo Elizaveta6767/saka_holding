@@ -17,6 +17,7 @@
     color: #a9a9a9;
     gap: 10px;
     display: flex;
+    
 }
 .dark{
     color: var(--header-top-color);

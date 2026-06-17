@@ -29,9 +29,10 @@ import Recently from '@/components/recently-viewed/Recently.vue';
     <Recently/>
   </div>
 </template>
+
 <style lang="scss">
 .main{
-  padding: 0 200px; 
+  padding: 20px 200px; 
   line-height: 30px;
 }
 .info_compani{
@@ -40,5 +41,54 @@ import Recently from '@/components/recently-viewed/Recently.vue';
 }
 .view{
   padding: 0 100px;
+}
+
+/* Адаптив для планшета */
+@media (max-width: 1024px) {
+  .main {
+    padding: 20px 50px;
+  }
+  
+  .info_compani {
+    gap: 40px;
+    flex-wrap: wrap;
+  }
+  
+  .view {
+    padding: 0 40px;
+  }
+}
+
+/* Адаптив для телефона */
+@media (max-width: 768px) {
+  .main {
+    padding: 15px 20px;
+    line-height: 26px;
+  }
+  
+  .info_compani {
+    gap: 20px;
+    flex-direction: column;
+  }
+  
+  .view {
+    padding: 0 15px;
+  }
+}
+
+/* Адаптив для маленьких телефонов */
+@media (max-width: 480px) {
+  .main {
+    padding: 10px 15px;
+    line-height: 24px;
+  }
+  
+  .info_compani {
+    gap: 15px;
+  }
+  
+  .view {
+    padding: 0 10px;
+  }
 }
 </style>

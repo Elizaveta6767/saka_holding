@@ -1,7 +1,4 @@
 <script>
-
-
-    
 </script>
 
 <template>
@@ -207,12 +204,13 @@
   grid-template-columns: repeat(3, 1fr);
   gap: 20px;
   max-width: 900px;
-  margin: 0 auto;
-  padding: 20px;
+  margin: 0;
+  padding: 20px 0;
 }
 
 .product-card {
   width: 100%;
+  max-width: 280px;
   background: #f8f8f8;
   border-radius: 12px;
   padding: 10px;
@@ -288,6 +286,130 @@
   .btn-arrow {
     width: 16px;
     filter: brightness(0.2);
+  }
+}
+
+/* Адаптив для планшета - 2 столбца, прижато к левому краю */
+@media (max-width: 1024px) {
+  .product {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 15px;
+    padding: 15px 0;
+    max-width: 600px;
+    margin: 0;
+  }
+  
+  .product-card {
+    max-width: 280px;
+  }
+  
+  .img-wrapper {
+    height: 180px;
+  }
+  
+  .product-name {
+    font-size: 15px;
+  }
+  
+  .product-price .current-price {
+    font-size: 16px;
+  }
+  
+  .details-btn {
+    font-size: 13px;
+    padding: 10px 16px;
+  }
+}
+
+/* Адаптив для телефона - 1 столбец, прижато к левому краю */
+@media (max-width: 768px) {
+  .product {
+    grid-template-columns: 1fr;
+    gap: 15px;
+    padding: 15px 0;
+    max-width: 100%;
+    margin: 0;
+  }
+  
+  .product-card {
+    max-width: 280px;
+    padding: 10px;
+  }
+  
+  .img-wrapper {
+    height: 200px;
+  }
+  
+  .product-content {
+    padding: 12px 5px 5px;
+  }
+  
+  .product-name {
+    font-size: 16px;
+    margin-bottom: 8px;
+  }
+  
+  .product-price {
+    margin-bottom: 15px;
+    
+    .current-price {
+      font-size: 18px;
+    }
+    
+    .product-size {
+      font-size: 12px;
+    }
+  }
+  
+  .details-btn {
+    font-size: 14px;
+    padding: 12px 20px;
+  }
+}
+
+/* Адаптив для маленьких телефонов */
+@media (max-width: 480px) {
+  .product {
+    gap: 12px;
+    padding: 10px 0;
+  }
+  
+  .product-card {
+    max-width: 260px;
+    padding: 8px;
+  }
+  
+  .img-wrapper {
+    height: 180px;
+  }
+  
+  .product-content {
+    padding: 10px 3px 3px;
+  }
+  
+  .product-name {
+    font-size: 14px;
+  }
+  
+  .product-price {
+    margin-bottom: 12px;
+    
+    .current-price {
+      font-size: 16px;
+    }
+    
+    .product-size {
+      font-size: 11px;
+    }
+  }
+  
+  .details-btn {
+    font-size: 12px;
+    padding: 10px 16px;
+    
+    .btn-arrow {
+      width: 14px;
+    }
   }
 }
 </style>
