@@ -22,7 +22,7 @@
 import Tshirt from '@/components/tshirt/PaletteItem.vue'
 </script>
 
-<style scoped>
+<style lang="scss" scoped>
 .palette-container {
     width: 100%;
     max-width: 1440px;
@@ -31,24 +31,21 @@ import Tshirt from '@/components/tshirt/PaletteItem.vue'
     box-sizing: border-box;
 }
 
-/* Сетка по умолчанию (Десктоп): 2 ряда по 6 колонок */
 .palette-grid {
     display: grid;
-    /* 6 колонок авто-ширины, выровненных по центру */
     grid-template-columns: repeat(6, auto); 
-    /* Отступ между рядами (80px) и между колонками (100px) */
     gap: 80px 100px; 
     justify-content: center;
 }
 
-@media (max-width: 960px) {
+@include tablet {
     .palette-grid {
         grid-template-columns: repeat(3, auto); 
         gap: 50px 40px; 
     }
 }
 
-@media (max-width: 480px) {
+@include mobile {
     .palette-grid {
         grid-template-columns: repeat(2, auto); 
         gap: 40px 20px; 

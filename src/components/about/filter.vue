@@ -37,7 +37,7 @@ input::-webkit-slider-thumb {
     width: 14px;
     height: 14px;
     border-radius: 50%;
-    background: var(--dark-gold);  /* ← золотой цвет */
+    background: var(--dark-gold); 
     cursor: pointer;
 }
 

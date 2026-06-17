@@ -18,7 +18,7 @@
   </section>
 </template>
 
-<script setup>
+<script setup lang="ts">
 import { ref } from 'vue'
 
 const fabrics = ref([
@@ -118,7 +118,7 @@ const fabrics = ref([
   position: absolute;
   bottom: 20px;
   left: 20px;
-  background-color: #dfc29f;
+  background-color: var(--gold-color);
   color: #1a222d; 
   padding: 8px 16px;
   border-radius: 8px;

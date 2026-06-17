@@ -1,31 +1,26 @@
 <template>
     <div class="order-section">
         <div class="order-card">
-            <!-- Заголовки -->
             <h2 class="order-title">
                 Фабрика «Saka Tekstil» осуществляет прокрас текстиля на заказ на самых выгодных условиях
             </h2>
             <p class="order-subtitle">
                 Просто оставьте заявку на сайте и мы свяжемся с вами в ближайшее время
             </p>
-            <form @submit.prevent="handleSubmit" class="order-form">
+            <form  class="order-form">
                 <div class="input-wrapper">
-                    <input type="text" v-model="formData.name" placeholder="Ваше имя" required class="form-input" />
+                    <input type="text"  placeholder="Ваше имя" required class="form-input" />
                 </div>
                 <div class="input-wrapper">
-                    <input type="tel" v-model="formData.phone" @input="handlePhoneInput"
-                        placeholder="+7 (___) ___-__-__" required class="form-input" />
+                    <input type="tel" placeholder="+7 (___) ___-__-__" required class="form-input" />
                 </div>
 
                 <div class="input-wrapper">
-                    <input type="email" v-model="formData.email" placeholder="Ваш E-mail" required class="form-input" />
+                    <input type="email"  placeholder="Ваш E-mail" required class="form-input" />
                 </div>
                 <button type="submit" class="submit-btn">
                     <span>Отправить</span>
-                    <svg class="arrow-icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M5 12H19M19 12L13 6M19 12L13 18" stroke="currentColor" stroke-width="2"
-                            stroke-linecap="round" stroke-linejoin="round" />
-                    </svg>
+                    <UiIcon name="arrowright"/>
                 </button>
             </form>
             <p class="disclaimer">
@@ -35,14 +30,10 @@
     </div>
 </template>
 
-<script setup>
-import { ref } from 'vue'
+<script setup lang="ts">
+import UiIcon from '../ui/UiIcon.vue';
 
-const formData = ref({
-    name: '',
-    phone: '',
-    email: ''
-})
+
 </script>
 
 <style lang="scss" scoped>
@@ -150,11 +141,6 @@ const formData = ref({
     }
 }
 
-.submit-btn:hover {
-    background-color: var(--gold-color);
-}
-
-
 .disclaimer {
     font-family: var(--font-famaly);
     font-size: 16px;
@@ -162,7 +148,7 @@ const formData = ref({
     margin: 0;
 }
 
-@media (max-width: 992px) {
+@include tablet{
     .order-card {
         padding: 40px 30px;
     }
@@ -179,7 +165,7 @@ const formData = ref({
     }
 }
 
-@media (max-width: 576px) {
+@include mobile {
     .order-title {
         font-size: 18px;
     }

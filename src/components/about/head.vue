@@ -1,4 +1,4 @@
-<script>
+<script setup lang="ts">
 </script>
 
 <template>
@@ -25,27 +25,7 @@
     font-size: 32px;
 }
 
-/* Адаптив для планшета */
-@media (max-width: 1024px) {
-    .text {
-        gap: 8px;
-        font-size: 14px;
-        padding: 0 30px;
-    }
-    
-    .bold {
-        font-size: 26px;
-        padding: 0 30px;
-        line-height: 1.3;
-    }
-    
-    .bold br {
-        display: none;
-    }
-}
-
-/* Адаптив для телефона - как на референсе */
-@media (max-width: 768px) {
+@include tablet{
     .text {
         gap: 6px;
         font-size: 13px;
@@ -62,16 +42,14 @@
     .bold br {
         display: none;
     }
-    
-    /* Разбиваем текст на отдельные строки как на референсе */
+
     .bold span {
         display: block;
         max-width: 280px;
     }
 }
 
-/* Адаптив для маленьких телефонов */
-@media (max-width: 480px) {
+@include mobile{
     .text {
         gap: 5px;
         font-size: 12px;

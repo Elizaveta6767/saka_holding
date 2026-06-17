@@ -4,9 +4,9 @@
       <img :src="image" :alt="title" />
       <div class="overlay"></div>
       
-      <RouterLink  class="arrow-btn">
+      <button  class="arrow-btn">
         <img src="../../assets/icons/strela.svg" alt="" >
-      </RouterLink>
+      </button>
       
       <h3 class="title">{{ title }}</h3>
     </div>
@@ -18,7 +18,7 @@
   </article>
 </template>
 
-<script setup>
+<script setup lang="ts">
 defineProps({
   image: { type: String, required: true },
   title: { type: String, required: true },

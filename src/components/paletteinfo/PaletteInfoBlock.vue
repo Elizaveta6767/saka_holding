@@ -27,7 +27,7 @@
 
 </script>
 
-<style scoped>
+<style lang="scss">
 
 .palette-info-section {
     width: 100%;
@@ -108,7 +108,7 @@
     margin-right: 4px;
 }
 
-@media (max-width: 768px) {
+@include tablet {
     .palette-info-container {
         flex-direction: column;
         align-items: flex-start;

@@ -1,4 +1,4 @@
-<script>
+<script setup lang="ts">
 </script>
 
 <template>
@@ -289,40 +289,8 @@
   }
 }
 
-/* Адаптив для планшета - 2 столбца, прижато к левому краю */
-@media (max-width: 1024px) {
-  .product {
-    grid-template-columns: repeat(2, 1fr);
-    gap: 15px;
-    padding: 15px 0;
-    max-width: 600px;
-    margin: 0;
-  }
-  
-  .product-card {
-    max-width: 280px;
-  }
-  
-  .img-wrapper {
-    height: 180px;
-  }
-  
-  .product-name {
-    font-size: 15px;
-  }
-  
-  .product-price .current-price {
-    font-size: 16px;
-  }
-  
-  .details-btn {
-    font-size: 13px;
-    padding: 10px 16px;
-  }
-}
 
-/* Адаптив для телефона - 1 столбец, прижато к левому краю */
-@media (max-width: 768px) {
+@include tablet {
   .product {
     grid-template-columns: 1fr;
     gap: 15px;
@@ -367,8 +335,7 @@
   }
 }
 
-/* Адаптив для маленьких телефонов */
-@media (max-width: 480px) {
+@include mobile {
   .product {
     gap: 12px;
     padding: 10px 0;

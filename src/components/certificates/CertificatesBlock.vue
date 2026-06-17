@@ -3,7 +3,7 @@
         <div class="certs-container">
             <h2 class="certs-title">Saka Tekstil дорожит своей репутацией</h2>
             <div class="certs-wrapper">
-                <button class="arrow-btn" @click="prevSlide" aria-label="Предыдущий слайд">
+                <button class="arrow-btn" @click="prevSlide" >
                     <img src="../../assets/icons/arrowleft.svg" alt="Назад">
                 </button>
                 <div class="certs-viewport">
@@ -19,7 +19,7 @@
                         </div>
                     </div>
                 </div>
-                <button class="arrow-btn" @click="nextSlide" aria-label="Следующий слайд">
+                <button class="arrow-btn" @click="nextSlide" >
                     <img src="../../assets/icons/arrowright.svg" alt="Вперед">
                 </button>
             </div>
@@ -27,7 +27,7 @@
     </div>
 </template>
 
-<script setup>
+<script setup lang="ts">
 import { ref, computed, onMounted, onUnmounted } from 'vue';
 
 const baseCertificates = [
@@ -101,7 +101,7 @@ const trackStyle = computed(() => {
     const translateFormula = `calc(-1 * ${currentIndex.value} * (100% + ${gap}px) / ${itemsToShow.value})`;
     return {
         transform: `translateX(${translateFormula})`,
-        transition: isTransitioning.value ? 'transform 0.5s cubic-bezier(0.25, 1, 0.5, 1)' : 'none',
+        transition: isTransitioning.value ? ' cubic-bezier(0.25, 1, 0.5, 1)' : 'none',
         '--items': itemsToShow.value,
         '--gap': `${gap}px`
     };
@@ -156,21 +156,18 @@ onUnmounted(() => {
     width: 100%;
 }
 
-/* Окно просмотра */
 .certs-viewport {
     overflow: hidden;
     width: 100%;
     max-width: 1128px; 
 }
 
-/* Трек/лента слайдов */
 .certs-track {
     display: flex;
     gap: var(--gap);
     width: 100%;
 }
 
-/* Карточка сертификата */
 .cert-card {
     flex: 0 0 calc((100% - var(--gap) * (var(--items) - 1)) / var(--items));
     box-sizing: border-box;

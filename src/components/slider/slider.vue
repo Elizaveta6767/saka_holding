@@ -1,17 +1,9 @@
 <template>
-  <div 
-    class="slider-card"
-    @mouseenter="stopAutoplay"
-    @mouseleave="startAutoplay"
-  >
+  <div class="slider-card" @mouseenter="stopAutoplay" @mouseleave="startAutoplay">
     <div class="slider-track" :style="{ transform: `translateX(-${currentSlide * 100}%)` }">
-      <div 
-        v-for="(slide, index) in slides" 
-        :key="slide.id" 
-        class="slide"
-      >
+      <div v-for="(slide, index) in slides" :key="slide.id" class="slide">
         <div class="slide-content">
-          <h2 class="slide-title" v-html="slide.title"></h2>          
+          <h2 class="slide-title" v-html="slide.title"></h2>
           <RouterLink class="slide-button">
             <span>Подробнее</span>
             <span class="arrow">→</span>
@@ -24,14 +16,9 @@
     </div>
     <div class="slider-controls">
       <div class="indicators">
-        <button 
-          v-for="(_, index) in slides" 
-          :key="index"
-          class="indicator-bar"
-          :class="{ active: currentSlide === index }"
-          @click="goToSlide(index)"
-          :aria-label="`Перейти к слайду ${index + 1}`"
-        ></button>
+        <button v-for="(_, index) in slides" :key="index" class="indicator-bar"
+          :class="{ active: currentSlide === index }" @click="goToSlide(index)"
+          :aria-label="`Перейти к слайду ${index + 1}`"></button>
       </div>
       <div class="counter">
         <span class="current">{{ formatNumber(currentSlide + 1) }}</span>
@@ -86,7 +73,7 @@ const formatNumber = (num) => {
   return num < 10 ? `0${num}` : num
 }
 const startAutoplay = () => {
-  stopAutoplay() 
+  stopAutoplay()
   autoplayInterval = setInterval(() => {
     currentSlide.value = (currentSlide.value + 1) % slides.value.length
   }, 5000)
@@ -119,20 +106,24 @@ const stopAutoplay = () => {
   overflow: hidden;
   font-family: 'Inter', sans-serif;
   box-shadow: 0 15px 35px rgba(0, 0, 0, 0.3);
-  @include tablet{
+
+  @include tablet {
     font-size: 26px;
   }
-  @include mobile{
+
+  @include mobile {
     font-size: 18px;
     min-height: 620px;
   }
 }
+
 .slider-track {
   display: flex;
   width: 100%;
   height: 100%;
   transition: transform 0.6s cubic-bezier(0.25, 1, 0.5, 1);
 }
+
 .slide {
   flex: 0 0 100%;
   width: 100%;
@@ -152,16 +143,19 @@ const stopAutoplay = () => {
   flex-direction: column;
   align-items: flex-start;
 }
+
 .slide-title {
   font-size: 38px;
   font-weight: 700;
   line-height: 1.3;
   color: #ffffff;
   margin: 0 0 40px 0;
-  @include tablet{
+
+  @include tablet {
     font-size: 26px;
   }
-  @include mobile{
+
+  @include mobile {
     font-size: 18px;
   }
 }
@@ -184,7 +178,8 @@ const stopAutoplay = () => {
   border: 1px solid #000000;
   min-width: 200px;
   box-sizing: border-box;
-  @include mobile{
+
+  @include mobile {
     max-width: 241px;
   }
 }
@@ -264,10 +259,12 @@ const stopAutoplay = () => {
 
 /* responsive: планшет и мобильные */
 
-@include mobile{
+@include mobile {
   .slider-card {
-    max-width: 360px; /* под айфоны/малые экраны */
-    height: 780px;    /* высокая карточка, как на фото */
+    max-width: 360px;
+    /* под айфоны/малые экраны */
+    height: 780px;
+    /* высокая карточка, как на фото */
     border-radius: 18px;
     display: flex;
     flex-direction: column;
@@ -300,7 +297,8 @@ const stopAutoplay = () => {
     position: absolute;
     right: 8px;
     bottom: 0;
-    height: 58%;    /* занимает нижнюю часть карточки */
+    height: 58%;
+    /* занимает нижнюю часть карточки */
     width: 100%;
     display: flex;
     align-items: flex-end;
@@ -312,7 +310,8 @@ const stopAutoplay = () => {
   .slide-image {
     width: 100%;
     height: 100%;
-    object-fit: cover; /* чтобы кадрирование похоже на фото */
+    object-fit: cover;
+    /* чтобы кадрирование похоже на фото */
     object-position: bottom right;
   }
 
@@ -340,7 +339,9 @@ const stopAutoplay = () => {
     height: 3px;
   }
 
-  .indicator-bar.active { background-color: var(--gold-color); }
+  .indicator-bar.active {
+    background-color: var(--gold-color);
+  }
 
   .counter {
     font-size: 14px;
@@ -352,17 +353,21 @@ const stopAutoplay = () => {
 
   .counter .divider,
   .counter .total {
-    color: #9ca3af; /* сероватый как в макете */
+    color: #9ca3af;
+    /* сероватый как в макете */
   }
 
   /* чуть уменьшаем общие отступы, чтобы всё помещалось */
-  .slide-content { padding-right: 24%; } /* освобождаем место для изображения */
+  .slide-content {
+    padding-right: 24%;
+  }
+
+  /* освобождаем место для изображения */
 }
 
 /* общий фикс: на маленьких экранах убираем фиксированную min-width кнопки */
-  .slide-button { min-width: 0; padding: 12px 18px; }
-
-
-  
-
+.slide-button {
+  min-width: 0;
+  padding: 12px 18px;
+}
 </style>

@@ -1,4 +1,5 @@
-<script>
+<script setup lang="ts">
+
 </script>
 
 <template>
@@ -38,40 +39,7 @@
     color: var(--header-top-color);
 }
 
-/* Адаптив для планшета */
-@media (max-width: 1024px) {
-    .choice {
-        gap: 15px;
-        flex-wrap: wrap;
-        padding: 0 20px;
-    }
-    
-    .filtres {
-        padding: 0 15px 0 0;
-    }
-    
-    .circle_filter {
-        width: 18px;
-        height: 18px;
-        font-size: 12px;
-    }
-    
-    .choice span {
-        font-size: 14px;
-    }
-    
-    .black {
-        font-size: 14px;
-    }
-    
-    .choice span img {
-        width: 14px;
-        height: 14px;
-    }
-}
-
-/* Адаптив для телефона - как на референсах */
-@media (max-width: 768px) {
+@include tablet {
     .choice {
         gap: 12px;
         flex-wrap: wrap;
@@ -94,8 +62,7 @@
     .choice span {
         font-size: 13px;
     }
-    
-    /* "СБРОСИТЬ" скрываем на телефоне */
+
     .choice span:not(.filtres):nth-child(2) {
         display: none;
     }
@@ -120,8 +87,7 @@
     }
 }
 
-/* Адаптив для маленьких телефонов */
-@media (max-width: 480px) {
+@include mobile {
     .choice {
         gap: 10px;
         padding: 0 10px;
