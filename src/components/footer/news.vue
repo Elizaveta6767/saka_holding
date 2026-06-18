@@ -2,60 +2,92 @@
 </script>
 
 <template>
-    <div class="news">
-        <h4>Следите за новостями</h4>
-        <form class="news_form" @submit.prevent="handleSubscribe">
-      <div class="group">
-        <input 
-          type="email" 
-          v-model="email"
-          placeholder="Ваш E-mail"
-          required
-          class="email"/>
-        <button type="submit" class="btn" :disabled="isSubmitting">
-          {{ isSubmitting ? 'Отправка...' : 'Отправить' }}
-        </button>
-      </div>
+  <div class="footer-subscribe">
+    <h4 class="title">Следите за новостями</h4>
+    
+    <form class="subscribe-form" @submit.prevent>
+      <input type="email" placeholder="Ваш E-mail" class="subscribe-input" required />
+      <button type="submit" class="subscribe-btn">Отправить</button>
     </form>
-    <div class="phone">
-        <img src="../../assets/icons/call.svg" alt="call">
-        <span>+90 212 547 08 26</span>
+
+    <div class="phone-block">
+      <img src="../../assets/icons/call.svg" alt="call">
+      <span class="phone-link">+90 212 547 08 26</span>
     </div>
-    </div>  
+  </div>
 </template>
-<style lang="scss">
-.news{
-    cursor: pointer;
-    color: var(--text-color);
-}
-.news_form {
-  margin-bottom: 20px;
-}
-.group {
+
+<style scoped lang="scss">
+.footer-subscribe {
   display: flex;
-  gap: 10px;
-  flex-wrap: wrap;
-  justify-content: center;
+  flex-direction: column;
+
+  .title {
+    font-size: 16px;
+    font-weight: 600;
+    color: #ffffff;
+    margin: 0 0 20px 0;
+  }
+
+  .subscribe-form {
+    display: flex;
+    align-items: center;
+    background-color: rgba(255, 255, 255, 0.05);
+    border-radius: 30px;
+    padding: 4px;
+    max-width: 420px;
+    width: 100%;
+    box-sizing: border-box;
+    border: 1px  rgba(255, 255, 255, 0.08);
+  
+  }
+
+  .subscribe-input {
+    flex-grow: 1;
+    background: none;
+    border: none;
+    outline: none;
+    padding: 13px 25px;
+    color: #ffffff;
+    font-size: 14px;
+  }
+
+  .subscribe-btn {
+    background-color: var(--gold-color);
+    color: #1e2633;
+    border: none;
+    outline: none;
+    padding: 17px 30px;
+    border-radius: 25px;
+    font-size: 14px;
+    font-weight: 600;
+    cursor: pointer;
+    
+  }
+
+  .phone-block {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-top: 35px;
+    align-self: center; 
+  }
+
+  .phone-link {
+    font-size: 18px;
+    font-weight: 700;
+    color: #ffffff;
+    text-decoration: none;
+    
+  }
 }
-.email{
-  flex: 1;
-  min-width: 200px;
-  padding: 12px 16px;
-  font-size: 16px;
-  border: none;
-  border-radius: 100px;
-  outline: none;
-  transition: box-shadow 0.3s ease;
-}
-.btn{
-  padding: 12px 24px;
-  font-size: 16px;
-  font-weight: 600;
-  color: var(--header-top-color);
-  background: var(--gold-color);
-  border: none;
-  border-radius: 100px;
-  cursor: pointer;
-  transition: transform 0.2s ease, box-shadow 0.2s ease;
+
+@include tablet{
+  .footer-subscribe {
+    .phone-block {
+      align-self: flex-start; 
+      margin-top: 25px;
+    }
+  }
 }
 </style>

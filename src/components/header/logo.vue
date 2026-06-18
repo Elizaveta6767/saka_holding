@@ -1,22 +1,20 @@
-<script setup lang="ts">
-import {RouterLink} from 'vue-router';
-</script>
-
 <template>
-    <RouterLink to="/" class="logo">
-        <img src="./../../assets/icons/logo.svg" alt="saka">
-    </RouterLink>  
+    <div class="logo">
+        <UiIcon name="logo" />
+    </div>
 </template>
 
-<style lang="scss">
-@use '../../assets/styles/mixins.scss';
+<script setup lang="ts">
+import UiIcon from '../ui/UiIcon.vue';
+</script>
 
-.logo{
-    cursor: pointer;
-    border: 0;
-    > img {
-        @include mobile{
-            width: 86px;
+<style scoped lang="scss">
+.logo {
+    padding-right: 20px;
+    @include tablet {
+        .logo {
+            margin-right: 20px;
+            max-width: 82px;
         }
     }
 }

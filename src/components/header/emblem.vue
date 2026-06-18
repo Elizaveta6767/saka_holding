@@ -1,17 +1,37 @@
 <template>
-    <div class="embleme">
-        <img src="../../assets/icons/saka.svg" alt="">
-        <img src="../../assets/icons/eros.svg" alt="">
-        <img src="../../assets/icons/tor.svg" alt="">
+    <div class="comp-emblems">
+        <div class="emblem ">
+            <img src="../../assets/icons/saka.svg" alt="">
+        </div>
+        <div class="emblem">
+            <img src="../../assets/icons/eros.svg" alt="">
+        </div>
+        <div class="emblem">
+            <img src="../../assets/icons/tor.svg" alt="">
+        </div>
     </div>
 </template>
 
-<script>
+<script setup lang="ts">
 </script>
 
-<style lang="scss">
-.embleme{
+<style setup lang="scss">
+@use '../../assets/styles/mixins.scss';
+
+.comp-emblems {
     display: flex;
-    gap: 15px;
+    gap: 20px;
+    align-items: center;
+
+    @include tablet {
+      gap: 8px;
+    }
 }
+
+.emblem {
+    align-items: center;
+    justify-content: center;
+}
+
+
 </style>

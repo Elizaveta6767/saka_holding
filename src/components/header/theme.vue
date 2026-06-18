@@ -1,21 +1,25 @@
-<script>
-</script>
 <template>
-    <div class="theme">
-        <button>DARK</button>
-        <span>/</span>
-        <button>LIGHT</button>
-    </div>
+  <div class="comp-lang">
+    <span class="lang active">dark</span>
+    <span class="divider">/</span>
+    <span class="lang">light</span>
+  </div>
 </template>
-<style lang="scss">
-.theme{
-    display: flex;
-    gap: 5px;
-}
-.theme button{
-    background-color: var(--header-top-color);
-    color: var(--text-color);
-    border: 0;
+
+<script setup lang="ts">
+</script>
+
+<style scoped lang="scss">
+.comp-lang {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 16px;
+  font-weight: 500;
+color: var(--grey-color);
+  .lang {
     cursor: pointer;
+  }
+  
 }
 </style>

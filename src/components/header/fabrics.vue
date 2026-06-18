@@ -46,12 +46,13 @@
 
 <style lang="scss">
 .elem {
-    gap: 8px;
+    gap: 5px;
     max-width: 150px;
     display: flex; 
     max-height: 100%;
     align-items: center;
     font-size: 14px;
+    justify-content: center;
 }
 
 .sale {

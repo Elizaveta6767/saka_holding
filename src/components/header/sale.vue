@@ -11,6 +11,7 @@
 .sale{
     background-color: var(--header-top-color);
     min-width: 140px;
+    max-width: 1440px;
   .sale_text{
     background-color: var(--gold-color);
     border: none;

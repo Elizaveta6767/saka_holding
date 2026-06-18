@@ -1,40 +1,53 @@
-<script>
-</script>
 <template>
-    <div class="shop">
-        <img src="../../assets/icons/shop.svg" alt="shop">
-        <div class="three">
-            3
+    <div class="comp-cart" :class="{ 'm-mobile': Mobile }">
+        <div class="cart-circle">
+            <img src="../../assets/icons/shop.svg" alt="">
+            <span class="cart-badge">3</span>
         </div>
     </div>
 </template>
-<style lang="scss">
-.shop{
-    display: flex;
-    align-items: center;
-    justify-content: flex-end;
-    border-radius: 50%;
-    width: 40px;
-    height: 40px;
-    background-color: var(--opacity-5-color);
-    margin-left: 80px;
+
+<script setup lang="ts">
+defineProps<{
+    Mobile?: boolean 
+}>();
+</script>
+
+<style scoped lang="scss">
+.comp-cart {
     cursor: pointer;
-    .three{
+    display: inline-flex;
+    align-items: center;
+    gap: 15px;
+
+    .cart-circle {
+        width: 42px;
+        height: 42px;
+        background: #334251;
         border-radius: 50%;
-        width: 16px;
-        height: 16px;
-        position: relative;
-        top: -10px;
-        left: 10px;
-        background-color: var(--dark-gold);
         display: flex;
-        justify-content: center;
         align-items: center;
+        justify-content: center;
+        position: relative;
+        color: #a6b1bd;
+    }
+    .cart-badge {
+        position: absolute;
+        top: -3px;
+        right: -3px;
+        background-color: var(--gold-color);
+        font-size: 10px;
+        color: var(--white-color);
+        border-radius: 50%;
+        width: 17px;
+        height: 17px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    .cart-label {
+        font-size: 16px;
+        color: #a6b1bd;
     }
 }
-.shop img{
-    position: relative;
-    left: 8px;
-}
-
 </style>

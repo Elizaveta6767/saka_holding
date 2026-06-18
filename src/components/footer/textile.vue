@@ -2,15 +2,22 @@
 </script>
 
 <template>
-    <div class="textile">
-        <span>Copyright © 2023 Сака Текстиль. Все права защищены.</span>
-        
-    </div>  
+  <div class="footer-copyright">
+    Copyright © 2023 Сака Текстиль. Все права защищены.
+  </div>
 </template>
 
-<style lang="scss">
-.textile{
-    cursor: pointer;
-    color: var(--text-color);
+<style scoped lang="scss">
+.footer-copyright {
+  font-size: 13px;
+  color: #5d6b79;
+  line-height: 1.5;
+  text-align: right;
+}
+
+@include tablet {
+  .footer-copyright {
+    text-align: left;
+  }
 }
 </style>
