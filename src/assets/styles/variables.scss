@@ -13,13 +13,44 @@
     --margin-m: 14px;
     --margin-l: 18px;
 
+   :root {
     --border-radius-xs: 6px;
     --opacity-5-color: #233240;
     --dark-gold: #BFA470;
     --header-top-color: #19242F;
-    --text-color: #fff;
+    --text-color: #19242F;
     --header-medium-color: #223241;
     --gold-color: #DBC08D;
     --grey-color: #F8F8F8;
-    --white-color: #fff;
+    --white-color: #ffffff;
+
+    // Дополнительные переменные
+    --bg-color: #ffffff;
+    --card-bg: #ffffff;
+    --input-bg: #f0f0f0;
+    --border-color: #e0e0e0;
+    --body-bg: #ffffff;
+}
+
+// ===== ТЁМНАЯ ТЕМА =====
+[data-theme="dark"] {
+    --opacity-5-color: #0d1520;
+    --header-top-color: #0a0f14;
+    --header-medium-color: #121a24;
+    --grey-color: #1a1f26;
+    --white-color: #1a1f26;
+    --text-color: #e8e8e8;
+    
+    // Для карточек и фонов
+    --bg-color: #121a24;
+    --card-bg: #1a2230;
+    --input-bg: #2a3340;
+    --border-color: #2a3340;
+    --body-bg: #121a24;
+    
+    // Золотые цвета остаются такими же
+    --dark-gold: #BFA470;
+    --gold-color: #DBC08D;
+    --border-radius-xs: 6px;
+}
 }

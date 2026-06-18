@@ -76,4 +76,95 @@ import ServiceCard from './ServiceCard.vue';
   gap: 18px;
 }
 
+.down-section-service {
+  margin: 0;
+}
+
+/* ===== ПЛАНШЕТ (768px - 1024px) ===== */
+@media (max-width: 1024px) and (min-width: 768px) {
+  .service-h1 {
+    margin-left: 40px;
+    max-width: 600px;
+  }
+
+  .service-h1 h1 {
+    font-size: 24px;
+  }
+
+  .section-service {
+    background-image: none; /* Убираем фон справа */
+    padding: 20px 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  /* Картинка снизу */
+  .section-service::after {
+    content: '';
+    display: block;
+    width: 100%;
+    max-width: 600px;
+    height: 350px;
+    background-image: url(@/assets/images/cloth.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    margin-top: 30px;
+  }
+
+  .top-section-service {
+    padding: 0 20px;
+    gap: 15px;
+    width: 100%;
+    max-width: 1400px;
+  }
+
+  .first_section {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 15px;
+    width: 100%;
+    max-width: 800px;
+  }
+
+  .down-section-service {
+    width: 100%;
+  }
+}
+
+/* ===== ТЕЛЕФОН (до 768px) ===== */
+@media (max-width: 767px) {
+  .service-h1 {
+    margin-left: 15px;
+    margin-right: 15px;
+    max-width: 100%;
+  }
+
+  .service-h1 h1 {
+    font-size: 18px;
+    text-align: center;
+  }
+
+  .section-service {
+    background-image: none;
+    padding: 15px 0;
+  }
+
+  .top-section-service {
+    padding: 0 15px;
+    gap: 10px;
+    width: 100%;
+  }
+
+  .first_section {
+    flex-direction: column;
+    gap: 10px;
+    width: 100%;
+  }
+
+  .down-section-service {
+    width: 100%;
+  }
+}
 </style>

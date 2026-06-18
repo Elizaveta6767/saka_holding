@@ -67,13 +67,12 @@
     .heading {
         font-size: 20px;
         margin-bottom: 30px;
-        text-align: center;
     }
     
     .cloth_card {
         gap: 25px;
         flex-wrap: wrap;
-        justify-content: center;
+        justify-content: flex-start; /* Прижато к левому краю */
     }
     
     .cloth {

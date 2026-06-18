@@ -292,7 +292,7 @@
 
 @include tablet {
   .product {
-    grid-template-columns: 1fr;
+    grid-template-columns: 1fr 1fr;
     gap: 15px;
     padding: 15px 0;
     max-width: 100%;
@@ -339,6 +339,7 @@
   .product {
     gap: 12px;
     padding: 10px 0;
+    grid-template-columns: 1fr;
   }
   
   .product-card {
