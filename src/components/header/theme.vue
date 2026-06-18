@@ -1,13 +1,25 @@
 <template>
-    <header class="header">
-        <div class="header-top">
-            <Logo />
-            <ThemeToggle />  <!-- ← добавь сюда -->
-        </div>
-        <!-- остальное -->
-    </header>
+  <div class="comp-lang">
+    <span class="lang active">dark</span>
+    <span class="divider">/</span>
+    <span class="lang">light</span>
+  </div>
 </template>
 
-<script setup>
-import ThemeToggle from '@/components/header/ThemeToggle.vue'
+<script setup lang="ts">
 </script>
+
+<style scoped lang="scss">
+.comp-lang {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 16px;
+  font-weight: 500;
+color: var(--grey-color);
+  .lang {
+    cursor: pointer;
+  }
+  
+}
+</style>

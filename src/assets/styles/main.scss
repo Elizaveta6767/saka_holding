@@ -11,11 +11,3 @@
     align-items: center;
     flex-direction: row;
 }
-import { createApp } from 'vue'
-import App from './App.vue'
-import './assets/styles/variables.scss'  // Подключаем переменные
-
-// Дополнительно можно подключить глобальные стили
-import './assets/styles/global.scss'  // если есть
-
-createApp(App).mount('#app')
