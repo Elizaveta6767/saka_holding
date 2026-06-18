@@ -2,7 +2,7 @@
 import Logo from '@/components/header/logo.vue';
 import Emblem from '@/components/header/emblem.vue';
 import Shop from '@/components/header/shop.vue';
-import User from '@/components/header/user.vue';
+import User from '@/components/header/User.vue';
 import Call from '@/components/header/PhoneCallBack.vue';
 import Theme from '@/components/header/theme.vue';
 import Menu from '@/components/header/menu.vue';
@@ -50,7 +50,7 @@ import Fabrics from '@/components/header/fabrics.vue';
     width: 100%;
     max-width: 100%;
     background-color: var(--header-top-color);
-    justify-content: space-between; /* Изменено с center на space-between */
+    justify-content: space-between;
     align-items: center;
     padding: 40px 40px;
     box-sizing: border-box;
@@ -84,7 +84,7 @@ import Fabrics from '@/components/header/fabrics.vue';
     align-items: center;
     max-width: 100%;
     overflow: hidden;
-    flex: 1; /* Добавлено */
+    flex: 1; 
 
     @include tablet {
       padding: 0;
@@ -92,8 +92,8 @@ import Fabrics from '@/components/header/fabrics.vue';
       display: flex;
       align-items: center;
       justify-content: flex-start;
-      width: auto; /* Изменено с 100% на auto */
-      flex: 0 1 auto; /* Добавлено */
+      width: auto; 
+      flex: 0 1 auto; 
     }
 
     @include mobile {
@@ -149,7 +149,7 @@ import Fabrics from '@/components/header/fabrics.vue';
     display: block;
     width: 30px;
     height: 30px;
-    margin-left: 15px; /* Добавлен отступ слева */
+    margin-left: 15px; 
   }
 
   @include mobile {

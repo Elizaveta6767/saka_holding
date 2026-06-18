@@ -43,7 +43,6 @@ import Recently from '@/components/recently-viewed/Recently.vue';
   padding: 0 100px;
 }
 
-/* Адаптив для планшета */
 @media (max-width: 1024px) {
   .main {
     padding: 20px 50px;
@@ -58,8 +57,6 @@ import Recently from '@/components/recently-viewed/Recently.vue';
     padding: 0 40px;
   }
 }
-
-/* Адаптив для телефона */
 @media (max-width: 768px) {
   .main {
     padding: 15px 20px;
@@ -76,7 +73,6 @@ import Recently from '@/components/recently-viewed/Recently.vue';
   }
 }
 
-/* Адаптив для маленьких телефонов */
 @media (max-width: 480px) {
   .main {
     padding: 10px 15px;

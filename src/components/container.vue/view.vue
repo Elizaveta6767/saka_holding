@@ -58,8 +58,7 @@
     gap: 30px;
 }
 
-/* Адаптив для планшета */
-@media (max-width: 1024px) {
+@include tablet{
     .view {
         padding: 30px 40px;
     }
@@ -72,7 +71,7 @@
     .cloth_card {
         gap: 25px;
         flex-wrap: wrap;
-        justify-content: flex-start; /* Прижато к левому краю */
+        justify-content: flex-start; 
     }
     
     .cloth {
@@ -93,45 +92,9 @@
     }
 }
 
-/* Адаптив для телефона */
-@media (max-width: 768px) {
-    .view {
-        padding: 20px 20px;
-    }
-    
-    .heading {
-        font-size: 18px;
-        margin-bottom: 25px;
-        text-align: center;
-    }
-    
-    .cloth_card {
-        gap: 30px;
-        flex-direction: column;
-        align-items: center;
-    }
-    
-    .cloth {
-        flex: none;
-        max-width: 100%;
-        width: 100%;
-        max-width: 450px;
-        align-items: flex-start;
-        text-align: left;
-    }
-    
-    .cloth span {
-        font-size: 17px;
-    }
-    
-    .cloth p {
-        font-size: 14px;
-        line-height: 1.5;
-    }
-}
 
-/* Адаптив для маленьких телефонов */
-@media (max-width: 480px) {
+
+@include mobile {
     .view {
         padding: 15px 15px;
     }

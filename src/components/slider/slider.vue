@@ -87,8 +87,6 @@ const stopAutoplay = () => {
 }
 
 
-
-
 </script>
 
 <style lang="scss" scoped>
@@ -257,14 +255,10 @@ const stopAutoplay = () => {
   color: #4b5563;
 }
 
-/* responsive: планшет и мобильные */
-
 @include mobile {
   .slider-card {
     max-width: 360px;
-    /* под айфоны/малые экраны */
     height: 780px;
-    /* высокая карточка, как на фото */
     border-radius: 18px;
     display: flex;
     flex-direction: column;
@@ -290,15 +284,11 @@ const stopAutoplay = () => {
     border: 1px solid #000000;
     margin-bottom: 400px;
   }
-
-  /* изображение сдвигаем ближе к правому краю и делаем чуть больше,
-     чтобы визуально как на присланной картинке */
   .slide-image-container {
     position: absolute;
     right: 8px;
     bottom: 0;
     height: 58%;
-    /* занимает нижнюю часть карточки */
     width: 100%;
     display: flex;
     align-items: flex-end;
@@ -311,11 +301,9 @@ const stopAutoplay = () => {
     width: 100%;
     height: 100%;
     object-fit: cover;
-    /* чтобы кадрирование похоже на фото */
     object-position: bottom right;
   }
 
-  /* управляющие элементы ближе к левому нижнему краю */
   .slider-controls {
     position: absolute;
     bottom: 20px;
@@ -354,18 +342,16 @@ const stopAutoplay = () => {
   .counter .divider,
   .counter .total {
     color: #9ca3af;
-    /* сероватый как в макете */
+
   }
 
-  /* чуть уменьшаем общие отступы, чтобы всё помещалось */
   .slide-content {
     padding-right: 24%;
   }
 
-  /* освобождаем место для изображения */
 }
 
-/* общий фикс: на маленьких экранах убираем фиксированную min-width кнопки */
+
 .slide-button {
   min-width: 0;
   padding: 12px 18px;

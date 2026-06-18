@@ -11,19 +11,13 @@ import Textile from '../footer/textile.vue';
 <template>
   <footer class="app-footer">
     <div class="footer-container">
-      
-      <!-- СТРОКА 1: Основной контент (Деление на 4 колонки) -->
       <div class="footer-main-grid">
         <Logo />
         <Navigation />
         <Info />
         <News />
       </div>
-
-      <!-- Разделительная линия -->
       <hr class="footer-divider" />
-
-      <!-- СТРОКА 2: Нижний бар (Социалки и Копирайт) -->
       <div class="footer-bottom-bar">
         <Online />
         <Textile />
@@ -36,21 +30,21 @@ import Textile from '../footer/textile.vue';
 <style scoped lang="scss">
 .app-footer {
   width: 100%;
-  max-width: 100%; /* Добавлено */
+  max-width: 100%;
   background-color: #1d2530;
   padding: 80px 0 40px 0;
   box-sizing: border-box;
   font-family: 'Inter', sans-serif;
-  overflow-x: hidden; /* Добавлено */
+  overflow-x: hidden; 
 }
 
 .footer-container {
   max-width: 1440px;
-  width: 100%; /* Добавлено */
+  width: 100%; 
   margin: 0 auto;
   padding: 0 40px;
   box-sizing: border-box;
-  overflow: hidden; /* Добавлено */
+  overflow: hidden; 
 
   @include tablet {
     padding: 0 30px;
@@ -61,15 +55,14 @@ import Textile from '../footer/textile.vue';
   }
 }
 
-/* Сетка верхней части */
 .footer-main-grid {
   display: grid;
   grid-template-columns: 1.2fr 1fr 1fr 2.2fr;
   gap: 40px;
   align-items: start;
   margin-bottom: 60px;
-  width: 100%; /* Добавлено */
-  overflow: hidden; /* Добавлено */
+  width: 100%; 
+  overflow: hidden; 
 
   @include tablet {
     grid-template-columns: 1fr 1fr;
@@ -83,23 +76,20 @@ import Textile from '../footer/textile.vue';
   }
 }
 
-/* Разделитель */
 .footer-divider {
   border: none;
   height: 1px;
   background-color: rgba(255, 255, 255, 0.08);
   margin: 0 0 30px 0;
-  width: 100%; /* Добавлено */
+  width: 100%; 
 }
 
-/* Нижняя панель */
 .footer-bottom-bar {
   display: flex;
   justify-content: space-between;
   align-items: center;
   gap: 30px;
-  width: 100%; /* Добавлено */
-  flex-wrap: wrap; /* Добавлено */
+  width: 100%; 
 
   @include mobile {
     flex-direction: column;
@@ -108,9 +98,6 @@ import Textile from '../footer/textile.vue';
   }
 }
 
-/* ================== АДАПТИВНОСТЬ ================== */
-
-/* Ноутбуки и средние экраны */
 @include tablet {
   .app-footer {
     padding: 60px 0 30px 0;
@@ -122,7 +109,6 @@ import Textile from '../footer/textile.vue';
   }
 }
 
-/* Планшеты и мобильные */
 @include mobile {
   .app-footer {
     padding: 40px 0 25px 0;

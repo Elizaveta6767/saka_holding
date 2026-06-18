@@ -8,18 +8,16 @@
       <u>Заказать звонок</u>
     </button>
 
-    <!-- Подключаем модальное окно, импортированное из этой же папки -->
     <CallModal 
       :is-open="isModalOpen" 
       @close="closeModal" 
-      @submit="handleFormSubmit" 
     />
   </div>
 </template>
 
 <script setup lang="ts">
 import { ref } from 'vue';
-import CallModal from './CallModal.vue'; // Импортируем из этой же папки
+import CallModal from './CallModal.vue'; 
 
 const isModalOpen = ref<boolean>(false);
 
@@ -29,10 +27,6 @@ const openModal = (): void => {
 
 const closeModal = (): void => {
   isModalOpen.value = false;
-};
-
-const handleFormSubmit = (formData: any): void => {
-  console.log('Данные формы из модалки:', formData);
 };
 </script>
 
@@ -48,7 +42,7 @@ const handleFormSubmit = (formData: any): void => {
     gap: 8px;
     font-size: 16px;
     font-weight: 700;
-    color: var(--text-color, #ffffff); /* Fallback на белый, если переменная не загрузилась */
+    color: var(--text-color, --white-color); 
   }
 
   .callback-btn {
@@ -61,10 +55,6 @@ const handleFormSubmit = (formData: any): void => {
     padding: 0;
     margin-top: 3px;
     transition: opacity 0.3s;
-
-    &:hover {
-      opacity: 0.7;
-    }
   }
 }
 </style>

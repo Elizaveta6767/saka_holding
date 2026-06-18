@@ -80,8 +80,7 @@ import ServiceCard from './ServiceCard.vue';
   margin: 0;
 }
 
-/* ===== ПЛАНШЕТ (768px - 1024px) ===== */
-@media (max-width: 1024px) and (min-width: 768px) {
+@include tablet {
   .service-h1 {
     margin-left: 40px;
     max-width: 600px;
@@ -92,14 +91,13 @@ import ServiceCard from './ServiceCard.vue';
   }
 
   .section-service {
-    background-image: none; /* Убираем фон справа */
+    background-image: none; 
     padding: 20px 0;
     display: flex;
     flex-direction: column;
     align-items: center;
   }
 
-  /* Картинка снизу */
   .section-service::after {
     content: '';
     display: block;
@@ -133,8 +131,7 @@ import ServiceCard from './ServiceCard.vue';
   }
 }
 
-/* ===== ТЕЛЕФОН (до 768px) ===== */
-@media (max-width: 767px) {
+@include mobile {
   .service-h1 {
     margin-left: 15px;
     margin-right: 15px;

@@ -31,7 +31,6 @@
 </template>
 
 <style lang="scss">
-/* ===== ОБЩИЙ КОНТЕЙНЕР ===== */
 .about-container {
     display: flex;
     gap: 40px;
@@ -78,7 +77,6 @@
     z-index: 3;
 }
 
-/* ===== НОУТБУК (1025px и выше) ===== */
 .img {
     width: 520px;
     height: 640px;
@@ -93,8 +91,7 @@
     object-fit: cover;
 }
 
-/* ===== ПЛАНШЕТ (768px - 1024px) ===== */
-@media (max-width: 1024px) and (min-width: 768px) {
+@include tablet {
     .about-container {
         gap: 20px;
         align-items: flex-start;
@@ -121,7 +118,7 @@
         justify-content: flex-start;
         gap: 15px;
         padding: 180px 0 0 0;
-        margin-left: -60px; /* Кружки заходят на картинку */
+        margin-left: -60px; 
         position: relative;
         z-index: 3;
     }
@@ -145,8 +142,7 @@
     }
 }
 
-/* ===== МАЛЕНЬКИЙ ПЛАНШЕТ / БОЛЬШОЙ ТЕЛЕФОН (до 768px) ===== */
-@media (max-width: 767px) {
+@include mobile {
     .about-container {
         flex-direction: column;
         align-items: center;

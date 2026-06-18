@@ -21,7 +21,6 @@
 </script>
 
 <style scoped lang="scss">
-/* ДЕСКТОП СТИЛИ */
 .mobile {
     background-color: var(--medium-header-color);
     display: flex;

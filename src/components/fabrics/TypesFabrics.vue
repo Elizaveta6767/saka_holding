@@ -91,9 +91,15 @@ const fabrics = ref([
   gap: 20px;
 }
 
-.span-5 { grid-column: span 5; }
-.span-4 { grid-column: span 4; }
-.span-3 { grid-column: span 3; }
+.span-5 { 
+  grid-column: span 5; 
+}
+.span-4 { 
+  grid-column: span 4; 
+}
+.span-3 { 
+  grid-column: span 3; 
+}
 
 .fabric-card {
   position: relative;
