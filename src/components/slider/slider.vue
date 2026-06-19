@@ -119,7 +119,7 @@ const stopAutoplay = () => {
   display: flex;
   width: 100%;
   height: 100%;
-  transition: transform 0.6s cubic-bezier(0.25, 1, 0.5, 1);
+  background-color: var(--color-dark-bg);
 }
 
 .slide {
